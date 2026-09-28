@@ -1,0 +1,15 @@
+# Anti-theft protection: Never allow raw unencrypted images to be committed
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.heic
+*.bmp
+!photos/icon-192.png
+!photos/icon-512.png
+
+# System & Local tools
+*.bat
+*.log
+.DS_Store
+Thumbs.db

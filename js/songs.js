@@ -1,0 +1,247 @@
+// Arijit Singh Superhit Song Catalog for Anchal 🌹✨
+// Streamed directly from Supabase Cloud Storage
+
+const SONGS = [
+  {
+    id: "arijit_1",
+    title: "Tum Hi Ho",
+    artist: "Arijit Singh",
+    album: "Aashiqui 2 (Romantic)",
+    category: "romantic",
+    duration: "4:22",
+    durationSec: 262,
+    photoIdx: 1,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/arijit/Arijit%20Singh%20-%20Tum%20Hi%20Ho.mp3",
+    tagline: "Kyunki tum hi ho, ab tum hi ho, zindagi ab tum hi ho… 💕"
+  },
+  {
+    id: "arijit_2",
+    title: "Kesariya",
+    artist: "Arijit Singh",
+    album: "Brahmastra",
+    category: "romantic",
+    duration: "4:28",
+    durationSec: 268,
+    photoIdx: 2,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/arijit/Arijit%20Singh%20-%20Kesariya.mp3",
+    tagline: "Kesariya tera ishq hai piya, rang jaaun jo main haath lagaun ✨"
+  },
+  {
+    id: "arijit_4",
+    title: "Apna Bana Le",
+    artist: "Arijit Singh, Sachin-Jigar",
+    album: "Bhediya",
+    category: "romantic",
+    duration: "4:21",
+    durationSec: 261,
+    photoIdx: 3,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/arijit/Arijit%20Singh%20-%20Apna%20Bana%20Le.mp3",
+    tagline: "Apna bana le piya, apna bana le piya… Dil ke nagar mein shehar tu basa le piya 💖"
+  },
+  {
+    id: "arijit_5",
+    title: "Shayad",
+    artist: "Arijit Singh",
+    album: "Love Aaj Kal",
+    category: "romantic",
+    duration: "4:07",
+    durationSec: 247,
+    photoIdx: 4,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/arijit/Arijit%20Singh%20-%20Shayad.mp3",
+    tagline: "Shayad kabhi na keh sakoon main tumko, kahe bina samajh lo tum shayad 🌸"
+  },
+  {
+    id: "arijit_6",
+    title: "Agar Tum Saath Ho",
+    artist: "Arijit Singh, Alka Yagnik",
+    album: "Tamasha",
+    category: "soulful",
+    duration: "5:41",
+    durationSec: 341,
+    photoIdx: 5,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/arijit/Arijit%20Singh%20-%20Agar%20Tum%20Saath%20Ho.mp3",
+    tagline: "Pal bhar thehar jaao, dil ye sambhal jaaye… agar tum saath ho 🌹"
+  },
+  {
+    id: "arijit_7",
+    title: "Raabta",
+    artist: "Arijit Singh",
+    album: "Agent Vinod",
+    category: "romantic",
+    duration: "4:04",
+    durationSec: 244,
+    photoIdx: 6,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/arijit/Arijit%20Singh%20-%20Raabta.mp3",
+    tagline: "Kehte hain khuda ne iss jahan mein sabhi ke liye kisi na kisi ko hai banaya har kisi ke liye 💫"
+  },
+  {
+    id: "arijit_8",
+    title: "Gerua",
+    artist: "Arijit Singh, Antara Mitra",
+    album: "Dilwale",
+    category: "romantic",
+    duration: "5:45",
+    durationSec: 345,
+    photoIdx: 1,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/arijit/Arijit%20Singh%20-%20Gerua.mp3",
+    tagline: "Rang de tu mohe gerua… ranhjhan ke yaar bulleya 💕"
+  },
+  {
+    id: "arijit_9",
+    title: "Ae Dil Hai Mushkil",
+    artist: "Arijit Singh",
+    album: "Ae Dil Hai Mushkil",
+    category: "soulful",
+    duration: "4:28",
+    durationSec: 268,
+    photoIdx: 2,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/arijit/Arijit%20Singh%20-%20Ae%20Dil%20Hai%20Mushkil.mp3",
+    tagline: "Tu safar mera, hai tu hi meri manzil, tere bina guzara ae dil hai mushkil 🌙"
+  },
+  {
+    id: "arijit_10",
+    title: "Hawayein",
+    artist: "Arijit Singh",
+    album: "Jab Harry Met Sejal",
+    category: "romantic",
+    duration: "4:50",
+    durationSec: 290,
+    photoIdx: 3,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/arijit/Arijit%20Singh%20-%20Hawayein.mp3",
+    tagline: "Hawayein hawayein le jayein jahan bhi, hawayein hawayein humko wahan le jayein 🍃"
+  },
+  {
+    id: "arijit_11",
+    title: "Kalank (Title Track)",
+    artist: "Arijit Singh",
+    album: "Kalank",
+    category: "soulful",
+    duration: "5:11",
+    durationSec: 311,
+    photoIdx: 4,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/arijit/Arijit%20Singh%20-%20Kalank.mp3",
+    tagline: "Hawaon mein bahenge, ghataon mein rahenge, tu barkha meri main tera badal piya 🌧️"
+  },
+  {
+    id: "arijit_12",
+    title: "Ghungroo",
+    artist: "Arijit Singh, Shilpa Rao",
+    album: "War",
+    category: "peppy",
+    duration: "5:02",
+    durationSec: 302,
+    photoIdx: 5,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/arijit/Arijit%20Singh%20-%20Ghungroo.mp3",
+    tagline: "Ghungroo toot gaye… masti aur khushiyon ka taraana 💃"
+  },
+  {
+    id: "arijit_13",
+    title: "Khairiyat",
+    artist: "Arijit Singh",
+    album: "Chhichhore",
+    category: "soulful",
+    duration: "4:40",
+    durationSec: 280,
+    photoIdx: 6,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/arijit/Arijit%20Singh%20-%20Khairiyat.mp3",
+    tagline: "Khairiyat pucho, kabhi kaifiyat pucho… tumhare bin deewane ka kya haal hai 🌹"
+  },
+  {
+    id: "arijit_14",
+    title: "Enna Sona",
+    artist: "Arijit Singh, A.R. Rahman",
+    album: "OK Jaanu",
+    category: "romantic",
+    duration: "3:33",
+    durationSec: 213,
+    photoIdx: 1,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/arijit/Arijit%20Singh%20-%20Enna%20Sona.mp3",
+    tagline: "Enna sona kyun rab ne banaya… aavan javan te main yaara nu manavan 🌟"
+  },
+  {
+    id: "arijit_15",
+    title: "Samjhawan",
+    artist: "Arijit Singh, Shreya Ghoshal",
+    album: "Humpty Sharma Ki Dulhania",
+    category: "romantic",
+    duration: "4:29",
+    durationSec: 269,
+    photoIdx: 2,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/arijit/Arijit%20Singh%20-%20Samjhawan.mp3",
+    tagline: "Main tenu samjhawan ki, na tere bina lagda ji… tu ki jaane pyar mera 🌸"
+  },
+  {
+    id: "arijit_16",
+    title: "Zaalima",
+    artist: "Arijit Singh, Harshdeep Kaur",
+    album: "Raees",
+    category: "romantic",
+    duration: "4:59",
+    durationSec: 299,
+    photoIdx: 3,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/arijit/Arijit%20Singh%20-%20Zaalima.mp3",
+    tagline: "Jo teri khatir tadpe pehle se hi, usse kya tadpana o zaalima 💕"
+  },
+  {
+    id: "arijit_17",
+    title: "Muskurane Ki Wajah",
+    artist: "Arijit Singh",
+    album: "Citylights",
+    category: "soulful",
+    duration: "5:34",
+    durationSec: 334,
+    photoIdx: 4,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/arijit/Arijit%20Singh%20-%20Muskurane%20Ki%20Wajah.mp3",
+    tagline: "Muskurane ki wajah tum ho, gungunane ki wajah tum ho… ✨"
+  },
+  {
+    id: "arijit_18",
+    title: "Chal Ghar Chalen",
+    artist: "Arijit Singh",
+    album: "Malang",
+    category: "soulful",
+    duration: "5:40",
+    durationSec: 340,
+    photoIdx: 5,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/arijit/Arijit%20Singh%20-%20Chal%20Ghar%20Chalen.mp3",
+    tagline: "Chal ghar chalen mere humdum… har pal jahan sukoon ho 🏡"
+  },
+  {
+    id: "arijit_19",
+    title: "Ilahi",
+    artist: "Arijit Singh",
+    album: "Yeh Jawaani Hai Deewani",
+    category: "peppy",
+    duration: "3:49",
+    durationSec: 229,
+    photoIdx: 6,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/arijit/Arijit%20Singh%20-%20Ilahi.mp3",
+    tagline: "Shaamein malang si, raatein surang si… Ilahi mera ji aaye aaye 🎒"
+  },
+  {
+    id: "arijit_20",
+    title: "Suno Na Sangemarmar",
+    artist: "Arijit Singh",
+    album: "Youngistaan",
+    category: "romantic",
+    duration: "3:22",
+    durationSec: 202,
+    photoIdx: 1,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/arijit/Arijit%20Singh%20-%20Suno%20Na%20Sangemarmar.mp3",
+    tagline: "Suno na sangemarmar ki ye meenarein, kuch bhi nahi hai aage tumhare 💖"
+  },
+  {
+    id: "sakshi_8",
+    title: "Dhaagon Se Baandhaa",
+    artist: "Arijit Singh, Shreya Ghoshal",
+    album: "Raksha Bandhan",
+    category: "soulful",
+    duration: "4:56",
+    durationSec: 296,
+    photoIdx: 2,
+    url: "https://rpmzejaeykniichgjubt.supabase.co/storage/v1/object/public/songs/sakshi/Arijit%20Singh%20-%20Dhaagon%20Se%20Baandhaa.mp3",
+    tagline: "Dhaagon se baandhaa ek rishta atoot… sneh aur samman ka bandhan 🌸"
+  }
+];
+
+window.SONGS = SONGS;

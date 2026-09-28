@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="hi" oncontextmenu="return false;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Anchal 🌹✨ | Arijit Singh Melodies & Memories</title>
+  
+  <!-- PWA & Mobile Optimization -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#F43F5E">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="photos/icon-192.png">
+  <link rel="icon" type="image/png" href="photos/icon-192.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body oncontextmenu="return false;">
+
+  <!-- Ambient Floating Butterflies & Hearts (Handled by butterflies.js) -->
+
+  <!-- Top Sticky App Header -->
+  <header class="app-header">
+    <div class="brand-wrapper">
+      <img src="photos/icon-192.png" data-photo-idx="1" alt="Anchal" class="brand-avatar">
+      <div class="brand-info">
+        <h1>Anchal 🌹✨</h1>
+        <p>Arijit Singh Melodies & Yaadein</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn" id="btn-install-app" title="Phone me Install Karein" style="display:none;">📲</button>
+      <button class="icon-btn" onclick="window.triggerAnchalBurst(window.innerWidth/2, 100)" title="Sparkles & Butterflies">🦋</button>
+    </div>
+  </header>
+
+  <!-- App Main Content Container -->
+  <main class="app-container">
+
+    <!-- ================= TAB 1: GHAR (HOME) ================= -->
+    <section id="tab-home" class="tab-content active">
+
+      <!-- Hero Banner -->
+      <div class="hero-banner">
+        <div class="hero-avatar-ring">
+          <img src="photos/icon-192.png" data-photo-idx="1" alt="Anchal" class="hero-avatar-img">
+        </div>
+        <h2 class="hero-title">Pyaari Anchal 🌸</h2>
+        <p class="hero-subtitle">Ek Khubsurat Muskaan & Sukoon Bhare Gaane</p>
+        <div class="hero-badge">🎤 Arijit Singh Special Edition</div>
+        <br>
+        <button class="quick-action-btn" id="hero-play-songs">
+          <span>Arijit Ke Gaane Suno</span>
+          <span>▶</span>
+        </button>
+      </div>
+
+      <!-- Aaj Ka Khaas Gaana (Featured Track) -->
+      <div class="warm-card">
+        <div class="section-header">
+          <div class="section-title">
+            <span>✨</span> Aaj Ka Khaas Gaana
+          </div>
+          <span class="hero-badge" style="background: rgba(245, 158, 11, 0.18); color: var(--yellow-600); border-color: var(--yellow-400);">Featured</span>
+        </div>
+        <div class="song-row" onclick="window.appPlayer.loadSong(1, true)">
+          <img src="photos/icon-192.png" data-photo-idx="2" class="song-thumb" alt="Kesariya">
+          <div class="song-meta">
+            <div class="song-row-title">Kesariya 🌹</div>
+            <div class="song-row-artist">Arijit Singh • Brahmastra • 4:28</div>
+          </div>
+          <div class="play-indicator">▶</div>
+        </div>
+      </div>
+
+      <!-- Anchal's Photo Strip Carousel -->
+      <div class="section-header" style="margin-top: 10px;">
+        <div class="section-title">
+          <span>📸</span> Anchal Ki Yaadein
+        </div>
+        <span class="section-more-link" onclick="document.querySelector('[data-tab=gallery]').click()">Sabhi Dekhein →</span>
+      </div>
+
+      <div class="photo-strip">
+        <div class="photo-strip-card" data-photo-idx="1">
+          <div class="photo-shield"></div>
+          <img src="photos/icon-192.png" data-photo-idx="1" class="photo-strip-img" alt="Anchal 1">
+          <div class="photo-strip-overlay">🌸 Pyaari Muskaan</div>
+        </div>
+        <div class="photo-strip-card" data-photo-idx="2">
+          <div class="photo-shield"></div>
+          <img src="photos/icon-192.png" data-photo-idx="2" class="photo-strip-img" alt="Anchal 2">
+          <div class="photo-strip-overlay">✨ Radiant Charm</div>
+        </div>
+        <div class="photo-strip-card" data-photo-idx="3">
+          <div class="photo-shield"></div>
+          <img src="photos/icon-192.png" data-photo-idx="3" class="photo-strip-img" alt="Anchal 3">
+          <div class="photo-strip-overlay">🦋 Titli Vibe</div>
+        </div>
+        <div class="photo-strip-card" data-photo-idx="4">
+          <div class="photo-shield"></div>
+          <img src="photos/icon-192.png" data-photo-idx="4" class="photo-strip-img" alt="Anchal 4">
+          <div class="photo-strip-overlay">☀️ Sunlight Glow</div>
+        </div>
+        <div class="photo-strip-card" data-photo-idx="5">
+          <div class="photo-shield"></div>
+          <img src="photos/icon-192.png" data-photo-idx="5" class="photo-strip-img" alt="Anchal 5">
+          <div class="photo-strip-overlay">🌹 Graceful Look</div>
+        </div>
+        <div class="photo-strip-card" data-photo-idx="6">
+          <div class="photo-shield"></div>
+          <img src="photos/icon-192.png" data-photo-idx="6" class="photo-strip-img" alt="Anchal 6">
+          <div class="photo-strip-overlay">💕 Sweet Moments</div>
+        </div>
+      </div>
+
+      <!-- Warm Golden Thought Card -->
+      <div class="warm-card" style="margin-top: 20px;">
+        <div class="section-title" style="margin-bottom: 8px;">
+          <span>💌</span> Azad Ka Chota Sa Sandesh
+        </div>
+        <p style="font-size: 13.5px; line-height: 1.7; color: var(--text-secondary); font-style: italic;">
+          "Anchal, tumhari muskaan se har din roshan ho jata hai. Tumhare liye Arijit Singh ke dilchasp aur sukoon bhare gaano ka ye khoobsurat gulistaan banaya hai. Jab bhi sukoon chahiye ho, bas yahan play dabana!"
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ================= TAB 2: GAANE (SONGS LIBRARY) ================= -->
+    <section id="tab-songs" class="tab-content">
+
+      <!-- Search Input -->
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="song-search-input" class="search-input" placeholder="Gaana ya movie search karein…">
+      </div>
+
+      <!-- Filter Chips -->
+      <div class="chips-row">
+        <button class="chip active" data-category="all">Sabhi (21) 🎵</button>
+        <button class="chip" data-category="romantic">💖 Romantic</button>
+        <button class="chip" data-category="soulful">🌙 Soulful</button>
+        <button class="chip" data-category="peppy">💃 Peppy</button>
+        <button class="chip" data-category="favorites">⭐ Favourites</button>
+      </div>
+
+      <!-- Songs List Dynamic Target -->
+      <div id="songs-container" class="song-list">
+        <!-- Rendered by app.js -->
+      </div>
+
+    </section>
+
+    <!-- ================= TAB 3: YAADEIN (PHOTO GALLERY) ================= -->
+    <section id="tab-gallery" class="tab-content">
+
+      <div class="section-header" style="margin-bottom: 16px;">
+        <div class="section-title">
+          <span>📸</span> Anchal Ki Khoobsurat Yaadein
+        </div>
+        <span style="font-size: 12px; font-weight: 700; color: var(--yellow-600); background: rgba(245,158,11,0.15); padding: 4px 10px; border-radius: 12px;">Protected 🔒</span>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-card" data-photo-idx="1">
+          <div style="position:relative; overflow:hidden;">
+            <div class="photo-shield"></div>
+            <img src="photos/icon-192.png" data-photo-idx="1" class="gallery-card-img" alt="Anchal 1">
+          </div>
+          <div class="gallery-card-info">
+            <div class="gallery-card-title">Anchal Ki Muskaan 🌸</div>
+            <div class="gallery-card-caption">Khilkhilati muskaan</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-photo-idx="2">
+          <div style="position:relative; overflow:hidden;">
+            <div class="photo-shield"></div>
+            <img src="photos/icon-192.png" data-photo-idx="2" class="gallery-card-img" alt="Anchal 2">
+          </div>
+          <div class="gallery-card-info">
+            <div class="gallery-card-title">Aesthetic Glow ✨</div>
+            <div class="gallery-card-caption">Sukoon bhari yaadein</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-photo-idx="3">
+          <div style="position:relative; overflow:hidden;">
+            <div class="photo-shield"></div>
+            <img src="photos/icon-192.png" data-photo-idx="3" class="gallery-card-img" alt="Anchal 3">
+          </div>
+          <div class="gallery-card-info">
+            <div class="gallery-card-title">Titli Jaise Sapne 🦋</div>
+            <div class="gallery-card-caption">Khushiyon ki udaan</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-photo-idx="4">
+          <div style="position:relative; overflow:hidden;">
+            <div class="photo-shield"></div>
+            <img src="photos/icon-192.png" data-photo-idx="4" class="gallery-card-img" alt="Anchal 4">
+          </div>
+          <div class="gallery-card-info">
+            <div class="gallery-card-title">Sunlight Radiance ☀️</div>
+            <div class="gallery-card-caption">Har pal me roshni</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-photo-idx="5">
+          <div style="position:relative; overflow:hidden;">
+            <div class="photo-shield"></div>
+            <img src="photos/icon-192.png" data-photo-idx="5" class="gallery-card-img" alt="Anchal 5">
+          </div>
+          <div class="gallery-card-info">
+            <div class="gallery-card-title">Desi Grace 🌹</div>
+            <div class="gallery-card-caption">Ek hazaaron mein khaas</div>
+          </div>
+        </div>
+
+        <div class="gallery-card" data-photo-idx="6">
+          <div style="position:relative; overflow:hidden;">
+            <div class="photo-shield"></div>
+            <img src="photos/icon-192.png" data-photo-idx="6" class="gallery-card-img" alt="Anchal 6">
+          </div>
+          <div class="gallery-card-info">
+            <div class="gallery-card-title">Everlasting Smiles 💕</div>
+            <div class="gallery-card-caption">Hamesha muskurati raho</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add More Photos Placeholder -->
+      <div class="warm-card" style="margin-top: 20px; text-align: center;">
+        <div style="font-size: 32px; margin-bottom: 6px;">📷✨</div>
+        <div style="font-weight: 800; font-size: 15px; color: var(--rose-700);">Nayi Photos Jald Hi Aayengi!</div>
+        <p style="font-size: 12.5px; color: var(--text-secondary); margin-top: 4px;">
+          Azad bhai jab bhi new photos update karenge, yahan automatically jud jayengi!
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ================= TAB 4: PAIGAAM (SPECIAL LETTER) ================= -->
+    <section id="tab-letter" class="tab-content">
+
+      <div style="height: 36px;"></div>
+
+      <div class="letter-envelope">
+        <div class="wax-seal">🌹</div>
+        <h3 class="letter-title">Pyaari Anchal Ke Liye Khaas Paigaam 💌</h3>
+
+        <div class="letter-body">
+          <p>Meri Pyaari Anchal,</p>
+          <br>
+          <p>
+            Zindagi ke safar mein kuch log itne khaas hote hain jinki muskaan dekh kar dil ko bepanah sukoon milta hai. Tum wahi ho jinki aawaz aur hasi se har jagah roshni phail jaati hai.
+          </p>
+          <br>
+          <p>
+            Phoolon ki mehak, titliyon ki udaan aur Arijit Singh ke meethay geeton ki tarah tumhari zindagi bhi hamesha khushiyon se bhari rahe. Chahe zindagi ka koi bhi mod ho, hamesha aage badhti rehna aur aise hi khilkhilati rehna.
+          </p>
+          <br>
+          <p>
+            Yeh chota sa web app tumhare liye ek pyaara sa tohfa hai — jab bhi mann udaas ho ya sukoon ki talash ho, bas isme aana aur Arijit ke madhur gaane sunna!
+          </p>
+        </div>
+
+        <div class="letter-signature">
+          — Hamesha Tumhara Dost, Azad 💕🌸
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ================= PERSISTENT BOTTOM MINI PLAYER ================= -->
+  <div id="mini-player" class="mini-player">
+    <div class="mini-progress-track">
+      <div id="mini-progress-bar" class="mini-progress-bar"></div>
+    </div>
+    <img id="mini-cover" src="photos/icon-192.png" data-photo-idx="1" alt="Cover" class="mini-cover">
+    <div class="mini-info">
+      <div id="mini-title" class="mini-title">Tum Hi Ho</div>
+      <div id="mini-artist" class="mini-artist">Arijit Singh</div>
+    </div>
+    <div class="mini-controls">
+      <button id="mini-play-btn" class="mini-btn">▶</button>
+      <button id="mini-next-btn" class="mini-btn" style="background: rgba(245, 158, 11, 0.85); color: var(--rose-900);">⏭</button>
+    </div>
+  </div>
+
+  <!-- ================= FULL SCREEN VINYL PLAYER MODAL ================= -->
+  <div id="full-player-modal" class="full-player-modal">
+    <div class="full-player-header">
+      <button id="close-full-player" class="close-btn">✕</button>
+      <div style="font-weight: 800; font-size: 14px; color: var(--rose-700);">Now Playing 🌹</div>
+      <button id="full-fav-btn" class="close-btn" style="color: var(--rose-600);">🤍</button>
+    </div>
+
+    <!-- Rotating Vinyl Disc -->
+    <div class="vinyl-disc-container">
+      <img id="full-cover" src="photos/icon-512.png" data-photo-idx="1" alt="Cover" class="vinyl-cover">
+    </div>
+
+    <!-- Song Info -->
+    <div class="full-meta">
+      <div id="full-title" class="full-title">Tum Hi Ho</div>
+      <div id="full-artist" class="full-artist">Arijit Singh</div>
+      <div id="full-album" class="full-album">Aashiqui 2</div>
+      <div id="full-tagline" class="full-tagline">Kyunki tum hi ho, ab tum hi ho, zindagi ab tum hi ho… 💕</div>
+    </div>
+
+    <!-- Seeker Slider -->
+    <div class="seek-bar-container">
+      <input type="range" id="full-seek-slider" class="seek-slider" min="0" max="100" value="0">
+      <div class="time-row">
+        <span id="full-current-time">0:00</span>
+        <span id="full-duration-time">4:22</span>
+      </div>
+    </div>
+
+    <!-- Player Controls -->
+    <div class="full-controls">
+      <button id="full-shuffle-btn" class="ctrl-btn" title="Shuffle">🔀</button>
+      <button id="full-prev-btn" class="ctrl-btn" title="Previous" style="font-size: 28px;">⏮</button>
+      <button id="full-play-btn" class="big-play-btn">▶</button>
+      <button id="full-next-btn" class="ctrl-btn" title="Next" style="font-size: 28px;">⏭</button>
+      <button id="full-repeat-btn" class="ctrl-btn" title="Repeat">🔁</button>
+    </div>
+  </div>
+
+  <!-- ================= PHOTO LIGHTBOX MODAL ================= -->
+  <div id="lightbox-modal" class="lightbox-modal">
+    <button id="lightbox-close" class="lightbox-close">✕</button>
+    <img id="lightbox-img" src="" class="lightbox-img" alt="Enlarged Photo">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+
+  <!-- ================= BOTTOM NAVIGATION BAR ================= -->
+  <nav class="bottom-nav">
+    <a href="#home" class="nav-item active" data-tab="home">
+      <span class="nav-icon">🌸</span>
+      <span>Ghar</span>
+    </a>
+    <a href="#songs" class="nav-item" data-tab="songs">
+      <span class="nav-icon">🎵</span>
+      <span>Gaane</span>
+    </a>
+    <a href="#gallery" class="nav-item" data-tab="gallery">
+      <span class="nav-icon">📸</span>
+      <span>Yaadein</span>
+    </a>
+    <a href="#letter" class="nav-item" data-tab="letter">
+      <span class="nav-icon">💌</span>
+      <span>Paigaam</span>
+    </a>
+  </nav>
+
+  <!-- Scripts -->
+  <script src="js/songs.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/butterflies.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Service Worker Registration for PWA & Offline Support -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => console.log('Anchal PWA Service Worker Registered', reg))
+          .catch(err => console.log('SW registration skipped', err));
+      });
+    }
+  </script>
+</body>
+</html>

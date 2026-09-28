@@ -19,10 +19,19 @@
   async function loadSecurePhoto(idx) {
     if (photoBlobUrls[idx]) return photoBlobUrls[idx];
     try {
-      const res = await fetch(`photos/anchal_${idx}.enc`);
-      if (!res.ok) throw new Error('Status: ' + res.status);
-      const buf = await res.arrayBuffer();
-      const bytes = new Uint8Array(buf);
+      let bytes;
+      if (window.ENCRYPTED_PHOTOS && window.ENCRYPTED_PHOTOS[idx]) {
+        const binStr = atob(window.ENCRYPTED_PHOTOS[idx]);
+        bytes = new Uint8Array(binStr.length);
+        for (let i = 0; i < binStr.length; i++) {
+          bytes[i] = binStr.charCodeAt(i);
+        }
+      } else {
+        const res = await fetch(`photos/anchal_${idx}.enc`);
+        if (!res.ok) throw new Error('Status: ' + res.status);
+        const buf = await res.arrayBuffer();
+        bytes = new Uint8Array(buf);
+      }
       const kl = SEC_KEY.length;
       for (let i = 0; i < bytes.length; i++) {
         bytes[i] ^= SEC_KEY[i % kl];

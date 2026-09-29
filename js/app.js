@@ -13,7 +13,7 @@
   // 2. In-Memory Image Decryption Engine
   // On GitHub, only .enc files exist (no readable JPGs).
   // In the browser, this decodes the encrypted bytes in RAM into temporary Blob URLs.
-  const SEC_KEY = new TextEncoder().encode('AnchalRose2026@Azad');
+  const SEC_KEY = new TextEncoder().encode('RoseGoldAnchalMusicVault2026Key');
   const photoBlobUrls = {};
 
   async function loadSecurePhoto(idx) {
@@ -34,7 +34,7 @@
       }
       const kl = SEC_KEY.length;
       for (let i = 0; i < bytes.length; i++) {
-        bytes[i] ^= SEC_KEY[i % kl];
+        bytes[i] ^= (SEC_KEY[i % kl] ^ ((i * 31 + 1) & 0xFF));
       }
       const blob = new Blob([bytes], { type: 'image/jpeg' });
       const url = URL.createObjectURL(blob);
